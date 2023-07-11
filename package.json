@@ -1,0 +1,32 @@
+{
+  "name": "form_utility_package",
+  "version": "0.0.9",
+  "description": "\"first version form utility \"",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "form_utility",
+    "form utility package",
+    "form_utility_package",
+    "form_utility_package",
+    "form package",
+    "form_input",
+    "forms",
+    "form"
+  ],
+  "author": "developersways",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.6",
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-react": "^7.22.5"
+  }
+}
