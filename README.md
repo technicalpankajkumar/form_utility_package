@@ -60,7 +60,13 @@
 
 #### options  => 
         you pass all the options in array of object like....
-        [{value:"value",key:"Key"},{value:"value2",key:"Key2"},{value:"value3",key:"Key3"}]
+
+###### note =>
+        only one object contain seleted key, if you add selected option , it selected props by 
+        default false for every options.
+
+        [{value:"value",key:"Key",selected:true},{value:"value2",key:"Key2"},{value:"value3",key:"Key3"}]
+
 #### control => 
         "select"
 #### name => 

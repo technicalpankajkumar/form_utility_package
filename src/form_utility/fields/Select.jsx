@@ -6,8 +6,8 @@ export default memo(function Select({ options, onChange, outerClass, name, label
             {label ? <> <label htmlFor={name}>{`${label} :`}</label><br /> </> : <span></span>}
             <select onChange={onChange} id={name} {...rest} >
                 {
-                    options.map((opt) => {
-                        return <option name={opt.value} value={opt.value} key={opt.value}>{opt.key}</option>
+                    options.map(({value,key,selected=false,...rest}) => {
+                        return <option name={value} value={value} key={value} selected={selected} {...rest}>{key}</option>
                     })
                 }
             </select>
