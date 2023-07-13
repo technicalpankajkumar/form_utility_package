@@ -19,6 +19,7 @@
   ],
   "author": "developersways",
   "license": "ISC",
+  "repository": "technicalpankajkumar/form_utility_package",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
