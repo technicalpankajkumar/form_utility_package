@@ -1,6 +1,6 @@
 import React,{memo} from 'react';
 
-export default memo(function Input({name,label,type,outerClass,...rest} ){
+function Input({name,label,type,outerClass,...rest} ){
 
   return (
     <>
@@ -10,4 +10,6 @@ export default memo(function Input({name,label,type,outerClass,...rest} ){
     </div>
     </>
   )
-} )
+} 
+
+export default memo(Input)

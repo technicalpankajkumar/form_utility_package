@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-export default function Radio({ label, options,name,outerClass, ...rest }) {
+ function Radio({ label, options,name,outerClass, ...rest }) {
     return (
         <div className={outerClass}>
-           { label ? <><label >{`${label} :`}</label><br /></>:<span></span>}
+           { label ? <><label >{`${label} :`}</label><br /></>:<></>}
             {
-                options.map((opt,index) => {
+                options.map(({label,value},index) => {
                     return <span key={index}>
-                        <input  type='radio' name={name} id={opt.value} value={opt.value} {...rest} />
-                        <label >{opt.label}</label> &nbsp;
+                        <input  type='radio' name={name} id={value} value={value} {...rest} />
+                        <label htmlFor={value}>{label}</label> &nbsp;
                     </span>
                 })
             }
         </div>
     )
 }   
+
+export default memo(Radio)
