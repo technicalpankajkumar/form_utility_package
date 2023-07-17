@@ -12,6 +12,10 @@ var _Button = _interopRequireDefault(require("../fields/Button"));
 var _Select = _interopRequireDefault(require("../fields/Select"));
 var _File = _interopRequireDefault(require("../fields/File"));
 var _Textarea = _interopRequireDefault(require("../fields/Textarea"));
+var _DataList = _interopRequireDefault(require("../fields/DataList"));
+var _Label = _interopRequireDefault(require("../fields/Label"));
+var _SelectOptGroup = _interopRequireDefault(require("../fields/SelectOptGroup"));
+var _Fieldset = _interopRequireDefault(require("../fields/Fieldset"));
 var _excluded = ["control"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -20,6 +24,8 @@ function Field(_ref) {
   var control = _ref.control,
     rest = _objectWithoutProperties(_ref, _excluded);
   switch (control) {
+    case 'label':
+      return /*#__PURE__*/_react["default"].createElement(_Label["default"], rest);
     case 'input':
       return /*#__PURE__*/_react["default"].createElement(_Input["default"], rest);
     case 'radio':
@@ -34,6 +40,12 @@ function Field(_ref) {
       return /*#__PURE__*/_react["default"].createElement(_Button["default"], rest);
     case 'file':
       return /*#__PURE__*/_react["default"].createElement(_File["default"], rest);
+    case 'datalist':
+      return /*#__PURE__*/_react["default"].createElement(_DataList["default"], rest);
+    case 'selectOptGroup':
+      return /*#__PURE__*/_react["default"].createElement(_SelectOptGroup["default"], rest);
+    case 'fieldset':
+      return /*#__PURE__*/_react["default"].createElement(_Fieldset["default"], rest);
     default:
       return null;
   }

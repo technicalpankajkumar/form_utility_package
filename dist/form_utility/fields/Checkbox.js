@@ -12,7 +12,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-var _default = /*#__PURE__*/(0, _react.memo)(function Checkbox(_ref) {
+function Checkbox(_ref) {
   var options = _ref.options,
     label = _ref.label,
     outerClass = _ref.outerClass,
@@ -20,18 +20,21 @@ var _default = /*#__PURE__*/(0, _react.memo)(function Checkbox(_ref) {
     rest = _objectWithoutProperties(_ref, _excluded);
   return /*#__PURE__*/_react["default"].createElement("div", {
     className: outerClass
-  }, label ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("label", null, "".concat(label, " :")), /*#__PURE__*/_react["default"].createElement("br", null)) : /*#__PURE__*/_react["default"].createElement("span", null), options.map(function (opt, index) {
+  }, label ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement("label", null, "".concat(label, " :")), /*#__PURE__*/_react["default"].createElement("br", null)) : /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null), options.map(function (_ref2, index) {
+    var value = _ref2.value,
+      label = _ref2.label;
     return /*#__PURE__*/_react["default"].createElement("span", {
       key: index
     }, "\xA0", /*#__PURE__*/_react["default"].createElement("input", _extends({
       type: "checkbox",
-      name: opt.name,
-      id: opt.value,
-      value: opt.value
+      name: value,
+      id: value,
+      value: value
     }, rest)), " \xA0", /*#__PURE__*/_react["default"].createElement("label", {
-      htmlFor: opt.name,
+      htmlFor: value,
       className: checkLabelClass
-    }, opt.label), " \xA0");
+    }, label), " \xA0");
   }));
-});
+}
+var _default = /*#__PURE__*/(0, _react.memo)(Checkbox);
 exports["default"] = _default;

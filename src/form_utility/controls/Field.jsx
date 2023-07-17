@@ -9,6 +9,7 @@ import Textarea from '../fields/Textarea';
 import DataList from '../fields/DataList';
 import Label from '../fields/Label';
 import SelectOptGroup from '../fields/SelectOptGroup';
+import Fieldset from '../fields/Fieldset';
 
 export default function Field({control,...rest}){
     
@@ -33,6 +34,8 @@ export default function Field({control,...rest}){
               return <DataList {...rest} />
         case 'selectOptGroup':
               return <SelectOptGroup {...rest} />
+        case 'fieldset':
+             return <Fieldset {...rest} />
         default :
               return null;      
     }

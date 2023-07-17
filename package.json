@@ -1,17 +1,18 @@
 {
   "name": "form_utility_package",
   "version": "0.1.1",
-  "description": "\"first version form utility \"",
+  "description": "\" form utility  package\"",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx babel src --out-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "react-form-utility-package",
     "form_utility",
     "form utility package",
-    "form_utility_package",
-    "form_utility_package",
+    "react_form_utility_package",
+    "form-utility-package",
     "form package",
     "form_input",
     "forms",
@@ -28,6 +29,7 @@
     "@babel/cli": "^7.22.6",
     "@babel/core": "^7.22.8",
     "@babel/preset-env": "^7.22.7",
-    "@babel/preset-react": "^7.22.5"
+    "@babel/preset-react": "^7.22.5",
+    "babel-cli": "^6.26.0"
   }
 }
