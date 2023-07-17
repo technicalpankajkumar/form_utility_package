@@ -6,10 +6,15 @@ import Button from '../fields/Button';
 import Select from '../fields/Select';
 import File from '../fields/File';
 import Textarea from '../fields/Textarea';
+import DataList from '../fields/DataList';
+import Label from '../fields/Label';
+import SelectOptGroup from '../fields/SelectOptGroup';
 
 export default function Field({control,...rest}){
     
     switch(control){
+        case 'label':
+             return <Label {...rest} />
         case 'input':
               return <Input {...rest}/>
         case 'radio':
@@ -24,6 +29,10 @@ export default function Field({control,...rest}){
               return <Button {...rest}/>
         case 'file':
               return <File {...rest}/>
+        case 'datalist':
+              return <DataList {...rest} />
+        case 'selectOptGroup':
+              return <SelectOptGroup {...rest} />
         default :
               return null;      
     }

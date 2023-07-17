@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 
-export default function Button({type,label,...rest}){
+ function Button({type,label,...rest}){
 
     return (
         <>
@@ -9,3 +9,4 @@ export default function Button({type,label,...rest}){
         </>
     )
 }
+export default memo(Button)
