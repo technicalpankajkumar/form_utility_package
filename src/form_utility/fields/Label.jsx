@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 
-function Label({label,id}) {
+function Label({label,id,...rest}) {
   return (
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} {...rest}>{label}</label>
   )
 }
 

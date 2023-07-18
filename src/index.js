@@ -9,8 +9,9 @@ import Select from './form_utility/fields/Select';
 import Textarea from './form_utility/fields/Textarea';
 import DataList from './form_utility/fields/DataList';
 import SelectOptGroup from './form_utility/fields/SelectOptGroup';
+import Fieldset from './form_utility/fields/Fieldset';
 
-
-export { Label, Input, Button, Checkbox, File, Radio, Select, Textarea, DataList, SelectOptGroup }
+export { Label, Input, Button, Checkbox, File, Radio, Select, Textarea, DataList, SelectOptGroup,
+Fieldset }
 
 export default Field;

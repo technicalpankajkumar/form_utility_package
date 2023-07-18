@@ -1,11 +1,11 @@
 import React, { memo } from 'react';
 
- function Radio({ label, options,name,outerClass, ...rest }) {
+ function Radio({ label, options,name,outerClass}) {
     return (
         <div className={outerClass}>
            { label ? <><label >{`${label} :`}</label><br /></>:<></>}
             {
-                options.map(({label,value},index) => {
+                options.map(({label,value,...rest},index) => {
                     return <span key={index}>
                         <input  type='radio' name={name} id={value} value={value} {...rest} />
                         <label htmlFor={value}>{label}</label> &nbsp;
